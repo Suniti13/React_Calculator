@@ -1,0 +1,125 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  font-family: inherit;
+}
+
+:root {
+  --color-white: #fff;
+  --color-light-white: #eee;
+
+  --color-primary: #d40640;
+  --bg-color-1: rgba(216,14,91,.9);
+  --bg-color-2: rgba(88,24,69,.9);
+
+  --color-secondary: #ff3c00;
+
+  --color-light-black: #222;
+  --color-black: #000;
+
+  --shadow : rgba(0,0,0, .4);
+}
+
+.App {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient( 143.3deg,  var(--bg-color-1), var(--bg-color-2)),
+                    url('../static/bgImg.jpg');
+  background-size: cover;
+}
+
+.calculator {
+  height: 80vh;
+  width: 30%;
+  min-width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1.2rem 2.2rem var(--shadow);
+  background-color: var(--color-white);
+}
+
+.resultScreen {
+  height: 20vh;
+  font-size: 4.5rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.computationScreen {
+  height: 4.5vh;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.screen {
+  height: 25vh;
+  width: 100%;
+  padding: 0 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--color-light-white);
+  background-color: var(--color-primary);
+}
+
+.keypad {
+  height: 55vh;
+  width: 100%;
+}
+
+.keypadRow {
+  height: 11vh;
+  width: 100%;
+  display: flex;
+  color: white;
+}
+
+.btn {
+  width: 25%;
+  height: 100%;
+  font-size: 1.7rem;
+  font-family: inherit;
+  background-color: var(--color-white);
+  border: 1px solid transparent;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s;
+  color: var(--color-black);
+  cursor: pointer;
+}
+.btn:hover {
+  color: var(--color-light-white);
+  background-color: var(--color-primary);
+}.btn:active {
+  transform: scale(.95);
+}
+
+.btn--large {
+  width: 50%;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  transition: all .2s;
+}
+
+.btn--primary {
+  color: var(--color-primary);
+}.btn--operator {
+  color: var(--color-secondary);
+}
