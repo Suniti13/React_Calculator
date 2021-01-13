@@ -1,7 +1,11 @@
 # Calculator
 
 I made this project to brush up my Reactjs skills.
+
 [Check it out](https://react-calculator-suniti13.vercel.app/)
+
+-----
+
 
 
 
